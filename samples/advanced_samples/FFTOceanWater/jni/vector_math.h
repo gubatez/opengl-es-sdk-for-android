@@ -336,7 +336,7 @@ inline vec3 vec_project(const vec4& vec)
 }
 
 template<typename T>
-inline T clamp(T value, T lo, T hi)
+inline T myclamp(T value, T lo, T hi)
 {
     if (value < lo)
         return lo;

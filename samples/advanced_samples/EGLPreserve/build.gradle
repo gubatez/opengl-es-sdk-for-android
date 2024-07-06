@@ -5,6 +5,8 @@ def sample = new File(parent).getName()
 println sample
 
 android {
+namespace "com.arm.malideveloper.openglessdk.eglpreserve"
+
     compileSdkVersion 28
 
     defaultConfig {

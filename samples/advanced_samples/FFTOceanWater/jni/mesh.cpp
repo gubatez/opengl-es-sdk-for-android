@@ -152,7 +152,7 @@ MorphedGeoMipMapMesh::MorphedGeoMipMapMesh()
 static inline float lod_factor(float max_lod, float distance_mod, vec3 dist)
 {
     float level = log2((vec_length(dist) + 0.0001f) * distance_mod);
-    return clamp(level, 0.0f, max_lod);
+    return myclamp(level, 0.0f, max_lod);
 }
 
 void MorphedGeoMipMapMesh::calculate_lods(const RenderInfo &info)

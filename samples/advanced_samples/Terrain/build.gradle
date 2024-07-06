@@ -5,10 +5,12 @@ def sample = new File(parent).getName()
 println sample
 
 android {
+namespace "com.arm.malideveloper.openglessdk.terrain"
+
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion "${minPlatformGles32}"
         targetSdkVersion 28
 
         ndk {
@@ -29,6 +31,8 @@ android {
                             "-DCMAKE_BUILD_TYPE=Debug"
 
                     targets "${sample}".toString()
+
+                    cppFlags "-lGLESv3"
                 }
             }
             jniDebuggable true

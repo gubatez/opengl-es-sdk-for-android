@@ -85,7 +85,7 @@ void Scene::move_camera(float delta_x, float delta_y)
     // Angles are mapped from [0, 1] => [0, 2pi] radians.
     camera_rotation_y -= delta_x * 0.25f;
     camera_rotation_x += delta_y * 0.15f;
-    camera_rotation_x = clamp(camera_rotation_x, -0.20f, 0.20f);
+    camera_rotation_x = myclamp(camera_rotation_x, -0.20f, 0.20f);
     camera_rotation_y -= floor(camera_rotation_y);
 }
 
